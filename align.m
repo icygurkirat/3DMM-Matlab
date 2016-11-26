@@ -1,4 +1,4 @@
-function [Imodel] = align()
+function [Imodel,rp] = align()
 a=axes('position',[0 0 1 1]);
 h=zoom;
 setAllowAxesZoom(h,a,false);
@@ -16,8 +16,21 @@ model = load('01_MorphableModel.mat');
 display_face(model.shapeMU, model.texMU, model.tl, rp);
 grid on
 set(gca,'color','none');
+disp(get(gca, 'PlotBoxAspectRatio'));
+disp(get(gca, 'DataAspectRatio'));
+disp(get(gca, 'CameraViewAngle'));
+disp(get(gca, 'CameraUpVector'));
+disp(get(gca, 'CameraTarget'));
+disp(get(gca, 'CameraPosition'));
 
 pause;
+fprintf('***********************\n');
+disp(get(gca, 'PlotBoxAspectRatio'));
+disp(get(gca, 'DataAspectRatio'));
+disp(get(gca, 'CameraViewAngle'));%
+disp(get(gca, 'CameraUpVector'));
+disp(get(gca, 'CameraTarget'));%
+disp(get(gca, 'CameraPosition'));%
 F = getframe(gcf);
 Imodel=F.cdata;
 figure, imshow(Imodel,[]), impixelinfo;
