@@ -34,6 +34,9 @@ for i = 1:maxit
     else
         beta = beta + 2*lambda*beta./(model.texEV);
     end
+    % add some gaussian noise to alpha and beta
+    alpha = alpha + 0.001*rand(199,1);
+    beta = beta + 0.001*rand(199,1);
     % update render param
     % rp = rp + lambda(d/del + 2*aplha./model.shapeEV);
     % skip since we don't have enough info
