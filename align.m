@@ -27,7 +27,7 @@ fprintf('***********************\n');
 disp(get(gca, 'PlotBoxAspectRatio'));
 GCA.PlotBoxAspectRatio = get(gca, 'PlotBoxAspectRatio');
 disp(get(gca, 'DataAspectRatio'));
-GCA.DataBoxAspectRatio = get(gca, 'DataBoxAspectRatio');
+GCA.DataAspectRatio = get(gca, 'DataAspectRatio');
 disp(get(gca, 'CameraViewAngle'));%
 GCA.CameraViewAngle = get(gca, 'CameraViewAngle');
 disp(get(gca, 'CameraUpVector'));
