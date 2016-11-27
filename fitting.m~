@@ -9,16 +9,22 @@ beta_old = beta;
 % target image
 T = imread('Capture.PNG');
 
+disp(size(T));
+[x,y,z]=size(I);
+T = imresize(T,[x,y]);
+
+disp(size(T));disp(size(T));
+
 for i = 1:maxit
     % compute delE = {sum(Iinp - Imodel)**2}/sigma**2
-    E = norm(I - T)^2;
+    E = norm(double(reshape(I,[],1,1)) - double(reshape(T,[],1,1)))^2;
     delE =  (E - Eold)/ sigma;
     delE = delE * delE;
     % update alpha
     if (norm(alpha - alpha_old) > 1e-6 )
-        alpha = alpha + lambda(delE./(alpha - alpha_old) + 2*(aplha)./(model.shapeEV));
+        alpha = alpha + lambda(delE./(alpha - alpha_old) + 2*(alpha)./(model.shapeEV));
     else
-        alpha = alpha + 2*(aplha)./(model.shapeEV);
+        alpha = alpha + 2*(alpha)./(model.shapeEV);
     end    
     % update beta
     if (norm(beta - beta_old) > 1e-6)
@@ -34,7 +40,7 @@ for i = 1:maxit
     % update I using alpha and beta
     %% todo
     I = get_update(model,alpha,beta,GCA);
-    if((i > 5) || (norm(alpha-alpha_old)<1e-6 && norm(beta-beta_old)<1e-6))
+    if((i > 5) && (norm(alpha-alpha_old)<1e-6 && norm(beta-beta_old)<1e-6))
         break;
     end    
 end

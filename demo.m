@@ -17,3 +17,5 @@ end
 
 %diaplay 3D model
 display_face(shp,tex,model.tl,defrp);
+
+disp('Hello')
