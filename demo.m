@@ -10,8 +10,8 @@ model = load('01_MorphableModel.mat');
 shp = model.shapeMU;
 tex = model.texMU;
 for i = 1:199
-    shp = shp + alpha(i)*(model.shapeEV(i));
-    tex = tex + beta(i)*(model.texEV(i));
+    shp = shp + alpha(i)*(model.shapePC(:,i));
+    tex = tex + beta(i)*(model.texPC(:,i));
 end
 
 

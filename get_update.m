@@ -17,8 +17,8 @@ a1=axes('position',[0.3 0.3 .5 .5]);
 shp = model.shapeMU;
 tex = model.texMU;
 for i = 1:199
-    shp = shp + alpha(i)*(model.shapeEV(i));
-    tex = tex + beta(i)*(model.texEV(i));
+    shp = shp + alpha(i)*(model.shapePC(:,i));
+    tex = tex + beta(i)*(model.texPC(:,i));
 end
 
 display_face(shp, tex, model.tl, rp, GCA);
