@@ -48,6 +48,7 @@ function display_face (shp, tex, tl, rp, GCA)
 		'Visible', 'off', 'box', 'off', ...
 		'Projection', 'perspective' ...
 		); 
+        %camlight(GCA.camlight);
     end
 	
 %% ------------------------------------------------------------CALLBACK--------

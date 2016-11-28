@@ -15,8 +15,8 @@ function rp = defrp
 
 error(nargchk(0, 0, nargin));
 
-rp.width        = 640;
-rp.height       = 486;
+rp.width        = 380;
+rp.height       = 483;
 
 rp.gamma        = 0;
 rp.theta        = 0;

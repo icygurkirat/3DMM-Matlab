@@ -36,8 +36,10 @@ disp(get(gca, 'CameraTarget'));%
 GCA.CameraTarget = get(gca, 'CameraTarget');
 disp(get(gca, 'CameraPosition'));%
 GCA.CameraPosition = get(gca, 'CameraPosition');
+%disp(get(camlight));
+%GCA.camlight = get(camlight);
 F = getframe(gcf);
 Imodel=F.cdata;
-figure, imshow(Imodel,[]), impixelinfo;
+%figure, imshow(Imodel,[]), impixelinfo;
 
 disp(rp.dir_light.dir);
