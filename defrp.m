@@ -1,17 +1,4 @@
 function rp = defrp
-%DEFRP returns default rendering parameters.
-%
-%  Set in RP the default rendering parameters: front view
-%  with no directed light, image size of 640 x 486.
-%
-%Syntax:   rp = defrp
-
-% Author:      Sami Romdhani
-% E-mail:      sami.romdhani@unibas.ch
-% URL:         http://informatik.unibas.ch/personen/romdhani_sami/
-% $Id: defrp.m 11524 2007-11-19 08:26:00Z romdhani $
-
-%------------- BEGIN CODE --------------
 
 error(nargchk(0, 0, nargin));
 
@@ -80,4 +67,3 @@ rp.global_illum.light_probe = [];
 
 rp.ablend = []; % no blending performed
 
-%------------- END OF CODE --------------

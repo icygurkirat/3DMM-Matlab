@@ -17,8 +17,8 @@ sigma = 100;
 Eold = rand();
 alpha_old = alpha;
 beta_old = beta;
-lambda_shape = 1;
-lambda_tex = 0.02;
+lambda_shape = 100;
+lambda_tex = 2;
 numComponents = 5;
 % target image
 T = imread('Capture.PNG');
