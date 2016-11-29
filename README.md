@@ -9,11 +9,10 @@ To use this code you will need the data set provided by the original authors. We
 <p>
 <b>demo.m</b>: Running this script will fit the model to the image in Capture.PNG and generate a 3d output.
 </p>
-<p>
-#<b>To see previous results</b>: 
+#<b>To see previous results</b> 
 run:<br>
 load('results.mat')<br>
 display_face(shp,tex,model.tl,defrp)
-</p>
+<p>
 Rest of the scripts are utility scripts.
-
+</p>
