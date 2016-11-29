@@ -11,8 +11,8 @@ To use this code you will need the data set provided by the original authors. We
 </p>
 <p>
 #<b>To see previous results</b>: 
-run:
-load('results.mat')
+run:<br>
+load('results.mat')<br>
 display_face(shp,tex,model.tl,defrp)
 </p>
 Rest of the scripts are utility scripts.
