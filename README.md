@@ -12,6 +12,7 @@ To use this code you will need the data set provided by the original authors. We
 #<b>To see previous results</b> 
 run:<br>
 load('results.mat')<br>
+model = load('01_MorphableModel.mat')<br>
 display_face(shp,tex,model.tl,defrp)
 <p>
 Rest of the scripts are utility scripts.
