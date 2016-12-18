@@ -89,7 +89,7 @@ for i = 1:maxit
     alpha_temp = alpha - lambda_shape*(calcGrad(delE,(alpha - alpha_old)));% + 2*(alpha)./(model.shapeEV.*model.shapeEV));
   
     % update beta
-    beta_temp = beta - lambda_shape*(calcGrad(delE,(beta - beta_old)));% + 2*(beta)./(model.texEV.*model.texEV));
+    beta_temp = beta - lambda_tex*(calcGrad(delE,(beta - beta_old)));% + 2*(beta)./(model.texEV.*model.texEV));
 
     % add some gaussian noise to alpha and beta
     Eold = E;
